@@ -3,7 +3,6 @@
   <meta charset="UTF-8">
   <title>Calculadora Avanzada</title>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Bungee&family=Goldman&family=Jost&family=Oswald&display=swap" rel="stylesheet">
-  <style>
    <style>
     body {
       margin: 0;
