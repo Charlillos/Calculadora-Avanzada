@@ -25,7 +25,7 @@
     }
 
     h1 {
-      color: red;
+      color: black;
       margin-top: 50px;
     }
 
