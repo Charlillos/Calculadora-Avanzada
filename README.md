@@ -1,4 +1,3 @@
-
 <html lang="es">
     <head> 
         <meta charset="UTF-8">
@@ -244,11 +243,3 @@ font-family: "Goldman", sans-serif;
 
       document.getElementById("resultado").innerText = "Resultado: " + resultado;
     }
-  </script>
-
-</body>
-</html>
-  </script>
-
-</body>
-</html>
