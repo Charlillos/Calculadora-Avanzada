@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="es">
     <head> 
         <meta charset="UTF-8">
@@ -112,7 +113,7 @@ font-family: "Goldman", sans-serif;
   font-weight: 700;
   font-style: normal;
   color: blueviolet;
-   
+    }</style>
   
     <h2>Operaciones</h2>
     <button onclick="realizarOperacion('+')">Sumar</button>
@@ -203,14 +204,14 @@ font-family: "Goldman", sans-serif;
     }
   </script>
 
- 
+  </div>
 
 
   <div id="pantalla-calculos" class="pantalla">
     <h2>Cálculos</h2>
     <p>Aquí irán los cálculos especiales.</p>
     <button onclick="mostrarPantalla('pantalla-principal')">Volver</button>
-  
+  </div>
 
   <script>
     function mostrarPantalla(id) {
@@ -243,3 +244,11 @@ font-family: "Goldman", sans-serif;
 
       document.getElementById("resultado").innerText = "Resultado: " + resultado;
     }
+  </script>
+
+</body>
+</html>
+  </script>
+
+</body>
+</html>
