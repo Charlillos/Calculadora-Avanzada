@@ -4,33 +4,27 @@
   <title>Calculadora Avanzada</title>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Bungee&family=Goldman&family=Jost&family=Oswald&display=swap" rel="stylesheet">
   <style>
-    body {
+   body {
       margin: 0;
       padding: 0;
-      background: linear-gradient(132deg, #000000, #00ff00, #0000ff, #e60073, #ff0000, #ffffff);
+      background: linear-gradient(132deg, #000000,#00ff00, #0000ff,#e60073,#ff0000,#ffffff);
       background-size: 400% 400%;
       animation: BackgroundGradient 15s ease infinite;
       font-family: 'Jost', sans-serif;
     }
 
     @keyframes BackgroundGradient {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
-    }
-
-    h1, h2, p {
-      text-align: center;
-      font-family: "Goldman", sans-serif;
+      0% {background-position: 0% 50%;}
+      50% {background-position: 100% 50%;}
+      100% {background-position: 0% 50%;}
     }
 
     h1 {
+      font-family: "Bungee", sans-serif;
+      font-weight: 800;
       color: red;
+      text-align: center;
       margin-top: 50px;
-    }
-
-    h2 {
-      color: blueviolet;
     }
 
     p {
@@ -56,15 +50,18 @@
       background-color: #00e6ac;
     }
 
-    .pantalla {
-      display: none;
-      text-align: center;
-      padding: 20px;
+
+    .centrado {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 30px;
     }
 
-    .visible {
-      display: block;
+    .pantalla {
+      display: none;
     }
+
   </style>
 </head>
 <body>
