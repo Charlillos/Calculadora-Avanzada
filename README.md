@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
@@ -35,7 +34,9 @@
     }
 
     p {
+      font-family: "Goldman", sans-serif;
       color: lightgray;
+      text-align: center;
       font-size: 1.1em;
     }
 
