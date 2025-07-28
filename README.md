@@ -81,19 +81,29 @@
     </div>
   </div>
 
-  <!-- Operaciones -->
+  <!-- Pantalla de Operaciones -->
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Bitcount+Prop+Double:wght@100..900&family=Bungee&family=Jost:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Playwrite+AU+QLD:wght@100..400&display=swap" rel="stylesheet">
+
   <div id="pantalla-operaciones" class="pantalla">
+    <style> 
+    h2 {
+font-family: "Goldman", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: blueviolet;
+    }</style>
+  
     <h2>Operaciones</h2>
-    <div class="centrado">
-      <button onclick="realizarOperacion('+')">Sumar</button>
-      <button onclick="realizarOperacion('-')">Restar</button>
-      <button onclick="realizarOperacion('*')">Multiplicar</button>
-      <button onclick="realizarOperacion('/')">Dividir</button>
-      <button onclick="realizarOperacion('^')">Potencia</button>
-      <button onclick="realizarOperacion('√')">Raíz</button><br><br>
-      <button onclick="mostrarPantalla('pantallaPrincipal')">Volver</button>
-      <p id="resultado"></p>
-    </div>
+    <button onclick="realizarOperacion('+')">Sumar</button>
+    <button onclick="realizarOperacion('-')">Restar</button>
+    <button onclick="realizarOperacion('*')">Multiplicar</button>
+    <button onclick="realizarOperacion('/')">Dividir</button>
+    <button onclick="realizarOperacion('^')">Potencia</button>
+    <button onclick="realizarOperacion('√')">Raíz</button>
+    <br><br>
+    <button onclick="mostrarPantalla('pantalla-principal')">Volver</button>
+    <p id="resultado"></p>
   </div>
 
   <!-- Conversiones -->
