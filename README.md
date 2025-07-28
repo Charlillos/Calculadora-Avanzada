@@ -91,14 +91,6 @@
     <button onclick="mostrarPantalla('pantalla-principal')">Volver</button>
   </div>
 
-  <!-- Pantalla de Conversiones -->
-  <div id="pantalla-conversiones" class="pantalla">
-    <h2>Conversiones</h2>
-    <button onclick="mostrarSubmenu()">Mostrar menú de conversiones</button>
-    <div id="submenu-conversiones" style="display: none; margin-top: 20px;">
-      <button onclick="mostrarFormulario('kg')">Kg a gramos</button>
-      <button onclick="mostrarFormulario('km')">Km a metros</button>
-    </div>
 
     <div id="form-kg" style="display: none;">
       <p>Ingrese kilogramos:</p>
