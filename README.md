@@ -190,6 +190,123 @@
       document.getElementById("resultadoConversion").innerText = `${valor} km = ${metros} metros.`;
     }
   </script>
+  <!-- Pantalla de Cálculos -->
+<div id="pantalla-calculos" class="pantalla">
+  <h2>Cálculos</h2>
+  <p>Aquí puedes realizar los cálculos especiales.</p>
+
+  <!-- Botón para mostrar submenú -->
+  <button onclick="mostrarSubmenuCalculos()">Mostrar menú de cálculos</button>
+
+  <!-- Submenú de opciones -->
+  <div id="submenu-calculos" style="display:none; margin-top: 20px;">
+    <button onclick="mostrarFormularioCalculo('t')">Tiempo</button>
+    <button onclick="mostrarFormularioCalculo('d')">Distancia</button>
+    <button onclick="mostrarFormularioCalculo('v')">Velocidad</button>
+  </div>
+
+  <!-- Formulario para calcular Tiempo -->
+  <div id="form-t" class="bloque" style="display:none;">
+    <p>Ingrese la distancia (km):</p>
+    <input type="number" id="input-distancia-t">
+    <p>Ingrese la velocidad (km/h):</p>
+    <input type="number" id="input-velocidad-t">
+    <button onclick="calcularTiempo()">Calcular Tiempo</button>
+  </div>
+
+  <!-- Formulario para calcular Distancia -->
+  <div id="form-d" class="bloque" style="display:none;">
+    <p>Ingrese la velocidad (km/h):</p>
+    <input type="number" id="input-velocidad-d">
+    <p>Ingrese el tiempo (h):</p>
+    <input type="number" id="input-tiempo-d">
+    <button onclick="calcularDistancia()">Calcular Distancia</button>
+  </div>
+
+  <!-- Formulario para calcular Velocidad -->
+  <div id="form-v" class="bloque" style="display:none;">
+    <p>Ingrese la distancia (km):</p>
+    <input type="number" id="input-distancia-v">
+    <p>Ingrese el tiempo (h):</p>
+    <input type="number" id="input-tiempo-v">
+    <button onclick="calcularVelocidad()">Calcular Velocidad</button>
+  </div>
+
+  <!-- Resultado -->
+  <p id="resultadoCalculo"></p>
+
+  <br>
+  <button onclick="mostrarPantalla('pantalla-principal')">Volver</button>
+</div>
+
+<script>
+  function mostrarPantalla(id) {
+    const pantallas = document.querySelectorAll("div");
+    pantallas.forEach(p => {
+      p.classList.remove("visible");
+      p.classList.add("pantalla");
+    });
+    document.getElementById(id).classList.remove("pantalla");
+    document.getElementById(id).classList.add("visible");
+  }
+
+  function mostrarSubmenuCalculos() {
+    document.getElementById("submenu-calculos").style.display = "block";
+  }
+
+  function mostrarFormularioCalculo(tipo) {
+    // Oculta todos los formularios primero
+    document.getElementById("form-t").style.display = "none";
+    document.getElementById("form-d").style.display = "none";
+    document.getElementById("form-v").style.display = "none";
+
+    // Muestra el formulario correspondiente
+    if (tipo === 't') {
+      document.getElementById("form-t").style.display = "block";
+    } else if (tipo === 'd') {
+      document.getElementById("form-d").style.display = "block";
+    } else if (tipo === 'v') {
+      document.getElementById("form-v").style.display = "block";
+    }
+
+    // Limpia el resultado
+    document.getElementById("resultadoCalculo").innerText = "";
+  }
+
+  function calcularTiempo() {
+    const d = parseFloat(document.getElementById("input-distancia-t").value);
+    const v = parseFloat(document.getElementById("input-velocidad-t").value);
+    if (isNaN(d) || isNaN(v) || v === 0) {
+      alert("Por favor, ingrese valores válidos y velocidad diferente de 0.");
+      return;
+    }
+    const t = d / v;
+    document.getElementById("resultadoCalculo").innerText = `El tiempo es ${t.toFixed(2)} horas.`;
+  }
+
+  function calcularDistancia() {
+    const v = parseFloat(document.getElementById("input-velocidad-d").value);
+    const t = parseFloat(document.getElementById("input-tiempo-d").value);
+    if (isNaN(v) || isNaN(t)) {
+      alert("Por favor, ingrese valores válidos.");
+      return;
+    }
+    const d = v * t;
+    document.getElementById("resultadoCalculo").innerText = `La distancia es ${d.toFixed(2)} km.`;
+  }
+
+  function calcularVelocidad() {
+    const d = parseFloat(document.getElementById("input-distancia-v").value);
+    const t = parseFloat(document.getElementById("input-tiempo-v").value);
+    if (isNaN(d) || isNaN(t) || t === 0) {
+      alert("Por favor, ingrese valores válidos y tiempo diferente de 0.");
+      return;
+    }
+    const v = d / t;
+    document.getElementById("resultadoCalculo").innerText = `La velocidad es ${v.toFixed(2)} km/h.`;
+  }
+</script>
 
 </body>
 </html>
+
