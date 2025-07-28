@@ -10,7 +10,7 @@
       background: linear-gradient(132deg, #000000,#00ff00, #0000ff,#e60073,#ff0000,#ffffff);
       background-size: 400% 400%;
       animation: BackgroundGradient 15s ease infinite;
-      font-family: 'Jost', sans-serif;
+      font-family: 'Goldman', sans-serif;
     }
 
     @keyframes BackgroundGradient {
