@@ -148,7 +148,11 @@ font-family: "Goldman", sans-serif;
 
       document.getElementById('resultado').textContent = "Resultado: " + resultado;
     }
+    </script>
   </div>
+  </div>
+  </div>
+    
 
   <!-- Conversiones -->
   <div id="pantalla-conversiones" class="pantalla">
