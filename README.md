@@ -22,7 +22,7 @@
     h1, h2 {
       text-align: center;
       font-family: 'Bungee', sans-serif;
-      color: red;
+      color: black;
       margin-top: 30px;
     }
 
