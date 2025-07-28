@@ -95,15 +95,59 @@ font-family: "Goldman", sans-serif;
     }</style>
   
     <h2>Operaciones</h2>
-    <button onclick="realizarOperacion('+')">Sumar</button>
-    <button onclick="realizarOperacion('-')">Restar</button>
-    <button onclick="realizarOperacion('*')">Multiplicar</button>
-    <button onclick="realizarOperacion('/')">Dividir</button>
-    <button onclick="realizarOperacion('^')">Potencia</button>
-    <button onclick="realizarOperacion('√')">Raíz</button>
-    <br><br>
-    <button onclick="mostrarPantalla('pantalla-principal')">Volver</button>
-    <p id="resultado"></p>
+   <input type="number" id="numero1" placeholder="Número 1">
+  <input type="number" id="numero2" placeholder="Número 2">
+  <br><br>
+
+  <button onclick="realizarOperacion('+')">Sumar</button>
+  <button onclick="realizarOperacion('-')">Restar</button>
+  <button onclick="realizarOperacion('*')">Multiplicar</button>
+  <button onclick="realizarOperacion('/')">Dividir</button>
+  <button onclick="realizarOperacion('^')">Potencia</button>
+  <button onclick="realizarOperacion('√')">Raíz</button>
+
+  <p id="resultado">Resultado: </p>
+
+  <script>
+    function realizarOperacion(operador) {
+      let num1 = parseFloat(document.getElementById('numero1').value);
+      let num2 = parseFloat(document.getElementById('numero2').value);
+      let resultado;
+
+      if (isNaN(num1) || (isNaN(num2) && operador !== '√')) {
+        document.getElementById('resultado').textContent = "Por favor, ingresa números válidos.";
+        return;
+      }
+
+      switch (operador) {
+        case '+':
+          resultado = num1 + num2;
+          break;
+        case '-':
+          resultado = num1 - num2;
+          break;
+        case '*':
+          resultado = num1 * num2;
+          break;
+        case '/':
+          if (num2 === 0) {
+            resultado = "Error: División por cero";
+          } else {
+            resultado = num1 / num2;
+          }
+          break;
+        case '^':
+          resultado = Math.pow(num1, num2);
+          break;
+        case '√':
+          resultado = Math.sqrt(num1);
+          break;
+        default:
+          resultado = "Operación no válida";
+      }
+
+      document.getElementById('resultado').textContent = "Resultado: " + resultado;
+    }
   </div>
 
   <!-- Conversiones -->
